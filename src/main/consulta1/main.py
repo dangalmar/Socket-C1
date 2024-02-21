@@ -1,6 +1,6 @@
 import threading
 
-from load_test import LoadTest
+from test import Test
 from server import Server
 
 if __name__ == "__main__":
@@ -13,10 +13,10 @@ if __name__ == "__main__":
     server_thread = threading.Thread(target=server.start)
     server_thread.start()
 
-    # Simulate load with LoadTest
-    load_test = LoadTest(HOST, PORT)
-    message = "a"
-    num_clients = 3
+    # Simulate load with Test
+    load_test = Test(HOST, PORT)
+    message = "1"
+    num_clients = 15000
 
     # Start client simulation in a separate thread
     load_test_thread = threading.Thread(target=load_test.client_simulation, args=(message, num_clients))

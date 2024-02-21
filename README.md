@@ -1,2 +1,2 @@
 # Socket-C1
-Socket de la consultoría 1 del CAI 2
+Socket de la consulta 1 del CAI 2
